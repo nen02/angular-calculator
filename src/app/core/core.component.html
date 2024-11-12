@@ -1,0 +1,18 @@
+<div class="w-screen h-screen flex justify-center items-center">
+  <div
+    class="border-slate-400"
+    [ngStyle]="{
+      width: calculatorWidth + 'px',
+      height: calculatorHeight + 'px',
+      padding: padding + 'px',
+      borderRadius: padding + 'px',
+      borderWidth: borderWidth + 'px'
+    }"
+  >
+    <app-display
+      [displayHeight]="60"
+      [borderWidth]="borderWidth / 1.25"
+      [borderRadius]="padding / 2"
+    ></app-display>
+  </div>
+</div>
