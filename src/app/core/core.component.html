@@ -1,6 +1,6 @@
 <div class="w-screen h-screen flex justify-center items-center">
   <div
-    class="border-slate-400"
+    class="border-slate-400 flex flex-col"
     [ngStyle]="{
       width: calculatorWidth + 'px',
       height: calculatorHeight + 'px',
@@ -9,10 +9,24 @@
       borderWidth: borderWidth + 'px'
     }"
   >
-    <app-display
-      [displayHeight]="60"
-      [borderWidth]="borderWidth / 1.25"
-      [borderRadius]="padding / 2"
-    ></app-display>
+    <div
+      class="border-slate-400"
+      [ngStyle]="{
+        flex: '0 1 auto',
+        marginBottom: spacingY + 'px', 
+      }"
+    >
+      <app-display
+        [borderRadius]="borderRadius"
+        [borderWidth]="borderWidth"
+        [displayHeight]="peaceHeight"
+      ></app-display>
+    </div>
+    <div [style.flex]="'1 1 auto'">
+      <app-keypad
+        [borderRadius]="borderRadius"
+        [borderWidth]="borderWidth"
+      ></app-keypad>
+    </div>
   </div>
 </div>

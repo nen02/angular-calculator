@@ -1,1 +1,12 @@
-<button (click)="onClick($event)">Click me</button>
+<button
+  (click)="onClick($event)"
+  class="border-slate-400"
+  [ngStyle]="{
+    width: width + 'px',
+    height: height + 'px',
+    borderWidth: borderWidth + 'px',
+    borderRadius: borderRadius + 'px'
+  }"
+>
+  {{ value }}
+</button>

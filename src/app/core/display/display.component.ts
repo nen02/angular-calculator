@@ -10,7 +10,8 @@ import { Component, Input } from '@angular/core';
 })
 export class DisplayComponent {
   @Input() value!: string;
-  @Input() displayHeight!: number;
   @Input() borderWidth!: number;
   @Input() borderRadius!: number;
+  @Input() displayHeight!: number;
+  @Input() spacingY!: number;
 }
